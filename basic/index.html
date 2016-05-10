@@ -4,9 +4,9 @@
     <script src="../build.js"></script>
   </head>
   <body>
-    <a-scene >
+    <a-scene>
     	<a-assets>
-    		<a-mixin> id='shiny' material='metalness: 0.9; roughness: 0.6'</a-mixin>
+    		<a-mixin id="shiny" material="metalness: 0.9; roughness: 0.6" rotation='90 0 0'></a-mixin>
     	</a-assets>
 	<a-entity rotation='0 0 0' position='0 0.5 3'>
 		<a-entity camera look-controls wasd-controls='fly: true' ></a-entity>
@@ -39,11 +39,13 @@
 					from='0.2' to="1.0"
 					repeat="indefinite"></a-animation>
 		</a-star>
+		
 		<a-animation attribute="rotation"
 					easing='linear'
 					dur="60000"
 					to="0 360 0"
 					repeat="indefinite"></a-animation>
+					
 	</a-entity>
 	<a-sky segment-width='10' segment-height='16' color="black"></a-sky>
     </a-scene>
