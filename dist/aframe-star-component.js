@@ -53,7 +53,8 @@
 	 * Example component for A-Frame.
 	 */
 	AFRAME.registerComponent('star', {
-	  schema: { 
+	  schema: {
+			dependencies: ['faceset'],		
 	    points: {default: 3},
 	    width: {default: 0.3}
 	  },
@@ -62,7 +63,7 @@
 	   * Called once when component is attached. Generally for initial setup.
 	   */
 	  init: function () {
-	    this.el.setAttribute('faceset');
+	    //this.el.setAttribute('faceset'); //use dependencies intead
 	  
 	  },
 
