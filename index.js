@@ -36,11 +36,11 @@ AFRAME.registerComponent('star', {
 		points = Math.max(3, points);
 		var step = 2 * Math.PI/points;
 		for (var a = 0; a < 2 * Math.PI; a += step) {
-			vts.push( [ Math.cos(a), 0 , Math.sin(a) ].join(" ") );
+			vts.push( new THREE.Vector3( Math.cos(a), 0 , Math.sin(a) ) );
 			//inner points
-			vts.push( [ r*Math.cos(a+step/2), 0 , r*Math.sin(a+step/2) ].join(" ") );
+			vts.push( new THREE.Vector3(r*Math.cos(a+step/2), 0 , r*Math.sin(a+step/2) ) );
 		}
-    el.setAttribute('faceset','vertices', vts.join(", "));
+    el.setAttribute('faceset','vertices', vts);
     //faces
 	  var faces = [];
 		for ( var p = 0; p < points; p++) {
