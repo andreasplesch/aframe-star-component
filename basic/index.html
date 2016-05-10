@@ -13,7 +13,15 @@
 			<a-entity light="type: directional; color: #FFF; intensity: 0.9" position="100 100 100"></a-entity>
 			<a-entity light="type: directional; color: #FFF; intensity: 0.5" position="0 -100 -100"></a-entity>
 			
-			<a-entity star='points: 31; width: 0.8' material='color: yellow; side: double' rotation='90 0 0' position='-2 0 0'></a-entity>
+			<a-entity rotation='90 0 0' position='-2 0 0'>
+				<a-entity star='points: 31; width: 0.8' material='color: yellow; side: double' >
+					<a-animation attribute="rotation"
+               					dur="10000"
+               					fill="forwards"
+       						to="0 360 0"
+               					repeat="indefinite"></a-animation>
+				</a-entity>
+			</a-entity>
 			<a-entity star material='color: purple; side: double' rotation='90 0 0' position='2 2 0'></a-entity>
 			
 			<a-star points='3' rotation='90 0 0' side='double' color='green' position='2 0 0'></a-star>
