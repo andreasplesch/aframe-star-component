@@ -1,8 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-require('aframe');
-require('../index.js');
-
-},{"../index.js":3,"aframe":6}],2:[function(require,module,exports){
 /**
  * Common mesh defaults, mappings, and transforms.
  */
@@ -35,7 +31,7 @@ module.exports = function getMeshMixin () {
   };
 };
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
@@ -45,7 +41,8 @@ require('aframe-faceset-component');
  * Example component for A-Frame.
  */
 AFRAME.registerComponent('star', {
-  schema: { 
+  schema: {
+		dependencies: ['faceset'],		
     points: {default: 3},
     width: {default: 0.3}
   },
@@ -54,7 +51,7 @@ AFRAME.registerComponent('star', {
    * Called once when component is attached. Generally for initial setup.
    */
   init: function () {
-    this.el.setAttribute('faceset');
+    //this.el.setAttribute('faceset'); //use dependencies intead
   
   },
 
@@ -118,7 +115,7 @@ AFRAME.registerPrimitive('a-star', AFRAME.utils.extendDeep({}, getMeshMixin(), {
 
 
 
-},{"./getMeshMixin":2,"aframe-faceset-component":4}],4:[function(require,module,exports){
+},{"./getMeshMixin":1,"aframe-faceset-component":3}],3:[function(require,module,exports){
 if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
@@ -401,7 +398,7 @@ function applyTranslate (geometry, translate, currentTranslate) {
 }
 
 
-},{"./lib/delaunay.js":5}],5:[function(require,module,exports){
+},{"./lib/delaunay.js":4}],4:[function(require,module,exports){
 //https://github.com/ironwallaby/delaunay
 
 var Delaunay;
@@ -639,7 +636,7 @@ var Delaunay;
     module.exports = Delaunay;
 })();
 
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 (function (global){
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.AFRAME = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 'use strict';
@@ -61543,4 +61540,8 @@ module.exports = getWakeLock();
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[1]);
+},{}],6:[function(require,module,exports){
+require('aframe');
+require('../index.js');
+
+},{"../index.js":2,"aframe":5}]},{},[6]);
