@@ -1,12 +1,15 @@
 ## aframe-star-component
 
-A Star component for [A-Frame](https://aframe.io).
+A Star component for [A-Frame](https://aframe.io). The component produces a flat 2d star in the x-z plane. The points are on the unit circle. The component comes with an <a-star> primitive for convenience.
 
 ### Properties
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-|          |             |               |
+|   points       | number  of points             |  3             |
+| width | width of the arms | 0.3 |
+
+Width should be larger than 0 and smaller than 1. A small width produces thin arms.
 
 ### Usage
 
@@ -23,7 +26,7 @@ Install and use by directly including the [browser files](dist):
 
 <body>
   <a-scene>
-    <a-entity star="exampleProp: exampleVal"></a-entity>
+    <a-entity star="points: 23"></a-entity>
   </a-scene>
 </body>
 ```
