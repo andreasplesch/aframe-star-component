@@ -113,7 +113,7 @@
 	  defaultAttributes: {
 	    star: {
 				points: 3,
-				radius: 0.3
+				width: 0.3
 			}
 	  },
 

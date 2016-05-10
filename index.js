@@ -67,7 +67,7 @@ AFRAME.registerPrimitive('a-star', AFRAME.utils.extendDeep({}, getMeshMixin(), {
   defaultAttributes: {
     star: {
 			points: 3,
-			radius: 0.3
+			width: 0.3
 		}
   },
 

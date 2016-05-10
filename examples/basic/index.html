@@ -4,7 +4,7 @@
     <script src="../build.js"></script>
   </head>
   <body>
-    <a-scene stats>   
+    <a-scene>   
 			<a-entity rotation='0 0 0' position='0 0.5 3'>
 				<a-entity camera look-controls wasd-controls='fly: true' ></a-entity>
 			</a-entity>
@@ -13,13 +13,28 @@
 			<a-entity light="type: directional; color: #FFF; intensity: 0.9" position="100 100 100"></a-entity>
 			<a-entity light="type: directional; color: #FFF; intensity: 0.5" position="0 -100 -100"></a-entity>
 			
-			<a-entity star='points: 31; width: 0.8' material='color: yellow; side: double' rotation='90 0 0' position='-2 0 0'></a-entity>
 			<a-entity star material='color: purple; side: double' rotation='90 0 0' position='2 2 0'></a-entity>
+			<a-entity rotation='90 0 0' position='-2 0 0'>
+				<a-entity>
+					<a-entity star='points: 31; width: 0.8' material='color: yellow; side: double' ></a-entity>
+					<a-animation attribute="rotation"
+						easing='linear'
+						dur="60000"
+               					
+						to="0 360 0"
+						repeat="indefinite"></a-animation>
+				</a-entity>
+			</a-entity>
 			
 			<a-star points='3' rotation='90 0 0' side='double' color='green' position='2 0 0'></a-star>
 			<a-star points='5' color='red' side='double' rotation='90 0 0'></a-star>
-			<!--a-star points='6' radius='0.6' radius='0.1' color='blue' side='front' rotation='90 0 0' position='-2 0 0'></a-star-->
-			<a-star points='8' color='lime' side='double' rotation='90 0 0' position='0 2 0'></a-star>
+			<a-star points='8' color='lime' side='double' rotation='90 0 0' position='0 2 0'>
+				<a-animation attribute="width"
+						dur="10000"
+						direction="alternate"
+						from='0.2' to="1.0"
+						repeat="indefinite"></a-animation>
+			</a-star>
 			
 			<a-sky color="#FFEED0"></a-sky>
 		</a-scene>
