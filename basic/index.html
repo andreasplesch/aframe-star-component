@@ -6,7 +6,7 @@
   <body>
     <a-scene>
     	<a-assets>
-    		<a-mixin id="shiny" material="metalness: 0.9; roughness: 0.6" rotation='90 0 0'></a-mixin>
+    		<a-mixin id="shiny" material="side: double; metalness: 0.9; roughness: 0.4" rotation='90 0 0'></a-mixin>
     	</a-assets>
 	<a-entity rotation='0 0 0' position='0 0.5 3'>
 		<a-entity camera look-controls wasd-controls='fly: true' ></a-entity>
@@ -17,7 +17,7 @@
 	<a-entity light="type: directional; color: #FFF; intensity: 0.5" position="0 -100 -100"></a-entity>
 	
 	<a-entity>
-		<a-entity star material='color: purple; side: double' mixin='shiny' position='2 2 0'></a-entity>
+		<a-entity star material='color: purple' mixin='shiny' position='2 2 0'></a-entity>
 		<a-entity rotation='90 0 0' position='-2 0 0'>
 			<a-entity>
 				<a-entity star='points: 31; width: 0.8' material='color: yellow; side: double' ></a-entity>
@@ -31,8 +31,8 @@
 		</a-entity>
 		
 		<a-star points='3' rotation='90 0 0' side='double' color='green' position='2 0 0'></a-star>
-		<a-star points='5' color='red'  side='double' mixin='shiny' rotation='90 0 0'></a-star>
-		<a-star points='8' color='lime' side='double' rotation='90 0 0' position='0 2 0'>
+		<a-star points='5' color='red'  mixin='shiny' ></a-star>
+		<a-star points='8' color='lime' mixin='shiny' position='0 2 0'>
 			<a-animation attribute="width"
 					dur="10000"
 					direction="alternate"
