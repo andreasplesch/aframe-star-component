@@ -24,6 +24,7 @@ Install and use by directly including the [browser files](dist):
   <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
 	<!-- for Chrome -->
   <!--script src="https://rawgit.com/aframevr/aframe/master/dist/aframe.min.js"></script-->
+  <script src="https://rawgit.com/andreasplesch/aframe-faceset-component/master/dist/aframe-faceset-component.min.js"></script>
   <script src="https://rawgit.com/andreasplesch/aframe-star-component/master/dist/aframe-star-component.min.js"></script>
 </head>
 
