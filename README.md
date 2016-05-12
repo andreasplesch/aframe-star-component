@@ -1,6 +1,7 @@
 ## aframe-star-component
 
-A Star component for [A-Frame](https://aframe.io). The component produces a flat 2d star in the x-z plane. The points are on the unit circle. The component comes with an <a-star> primitive for convenience.
+A Star component for [A-Frame](https://aframe.io). The component produces a flat star in the x-z plane. The outer points are on the unit circle. 
+The component comes with an <a-star> primitive for convenience. Chrome requires aframe > 0.2.0 for this component to function properly.
 
 ### Properties
 
@@ -21,6 +22,8 @@ Install and use by directly including the [browser files](dist):
 <head>
   <title>My A-Frame Scene</title>
   <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+	<!-- for Chrome -->
+  <!--script src="https://rawgit.com/aframevr/aframe/master/dist/aframe.min.js"></script-->
   <script src="https://rawgit.com/andreasplesch/aframe-star-component/master/dist/aframe-star-component.min.js"></script>
 </head>
 
@@ -43,5 +46,6 @@ Then register and use.
 
 ```js
 require('aframe');
+require('aframe-faceset-component');
 require('aframe-star-component');
 ```
