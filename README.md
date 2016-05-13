@@ -1,7 +1,7 @@
 ## aframe-star-component
 
 A Star component for [A-Frame](https://aframe.io). The component produces a flat star in the x-z plane. The outer points are on the unit circle. 
-The component comes with an <a-star> primitive for convenience. Chrome requires aframe > 0.2.0 for this component to function properly.
+The component comes with a `<a-star\>` primitive for convenience. Chrome requires aframe > 0.2.0 for this component to function properly.
 
 ### Properties
 
