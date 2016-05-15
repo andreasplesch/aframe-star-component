@@ -33,7 +33,7 @@ AFRAME.registerComponent('star', {
     //TODO make objects directly
     //vertices
 		var vts = [ new THREE.Vector3(0,0,0) ]; // add center point
-		points = Math.max(3, points);
+		points = Math.max(2, points);
 		var step = 2 * Math.PI/points;
 		for (var a = 0; a < 2 * Math.PI; a += step) {
 			vts.push( new THREE.Vector3( Math.cos(a), 0 , Math.sin(a) ) );
